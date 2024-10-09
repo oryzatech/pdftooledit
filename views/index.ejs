@@ -39,163 +39,24 @@
                                     <input type="file" name="pdfs" id="pdfs" accept=".pdf" multiple required class="form-control-file">
                             </div>
                           </div>
-            
-                                    <input type="submit" value="Merge PDFs" class="btn-lg common-btn pl-5 pr-5 mb-5 mt-5">
-                          </form>
                           <div class="container">
                             <div class="pdfhead mt-4 text-center mb-3"></div>
                               <ul id="pdf-list" class="list-group mb-4"></ul>
                                 <div class="row">
                                 </div>
                             </div>
+            
+                                    <input type="submit" value="Gabungkan PDFs" class="btn-lg common-btn pl-5 pr-5 mb-5 mt-5">
+                          </form>
+                         
                         </div>
                       </div>
                 </div>
             </div>
           </div>
         </div>
+        <%- include('includes/sidebars.ejs') %>
         
-        <div class="col-lg-4">
-          <div class="pb-3">
-            <div class="card">
-              <div class="card-header" style="border-bottom: 1px solid; color: #fff;width:60%;margin:20px;">Bekerja Dengan PDF</div>
-              <div class="card-body">
-              
-                <div class="list-group" style="background-color: #000000;color: #fff;">
-                
-                <li class="nav-item">
-                     <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/pdfeditor">
-                    <p style="color:#fff;">Edit PDF</p>
-                    <span><img src="/images/editpdf.png"
-                      class="rounded-circle" alt="Icon" height="20"></span>
-                    </a>
-                  
-                </li>
-
-                <li class="nav-item">
-                  <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/splitpdf">
-                 <p style="color:#fff;">Pisahkan PDF</p>
-                 <span><img src="https://cdn.iconscout.com/icon/free/png-256/pdf-file-20-504245.png"
-                  class="rounded-circle" alt="Icon" height="20"></span>
-                 </a>
-               
-                </li>
-
-                  <li class="nav-item">
-                    <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/rotate-pdf">
-                  <p style="color:#fff;">Putar Orientasi PDF</p>
-                  <span><img src="https://avepdf.com/images/rotate-pdf-rating.png" class="rounded-circle"
-                    alt="Icon" height="20"></span>
-                  </a>
-                
-                  </li>
-
-
-                  <li class="nav-item">
-                    <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/add-page-number">
-                  <p style="color:#fff;">Beri Nomor Halaman PDF</p>
-                  <span><img src="/images/addpages.png" class="rounded-circle" alt="Icon" height="20"></span>
-                  </a>
-                
-                  </li>
-
-
-                  <li class="nav-item">
-                    <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/delete">
-                  <p style="color:#fff;">Hapus Halaman PDF</p>
-                  <span><img src="/images/delete.svg" class="rounded-circle" alt="Icon" height="20"></span>
-                  </a>
-
-                  </li>
-
-
-                  
-                  <li class="nav-item">
-                    <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/watermark-pdf">
-                  <p style="color:#fff;">Beri Watermark PDF</p>
-                  <span><img src="/images/watermark.png" class="rounded-circle" alt="Icon" height="20"></span>
-                  </a>
-                
-                  </li>
-
-
-                  
-                  <li class="nav-item">
-                    <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/pdf-to-word">
-                  <p style="color:#fff;">Convert ke Word</p>
-                  <span><img src="/images/pdftoword.png" class="rounded-circle" alt="Icon" height="20"></span>
-                  </a>
-                
-                  </li>
-
-
-                  
-                  <li class="nav-item">
-                    <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/pdf-to-excel">
-                  <p style="color:#fff;">Convert ke Excel</p>
-                  <span><img src="/images/pdf-to-excel.svg" class="rounded-circle" alt="Icon" height="20"></span>
-                  </a>
-                
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/pdf-to-ppt">
-                  <p style="color:#fff;">Convert ke PPT</p>
-                  <span><img src="/images/pdf-to-ppt.png" class="rounded-circle" alt="Icon" height="20"></span>
-                  </a>
-                
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/pdf-to-jpg">
-                  <p style="color:#fff;">Convert ke JPG</p>
-                  <span><img src="/images/pdf-to-jpg.png" class="rounded-circle" alt="Icon" height="20"></span>
-                  </a>
-                
-                  </li>
-
-
-                  <li class="nav-item">
-                    <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/pdf-to-png">
-                  <p style="color:#fff;">Convert ke PNG</p>
-                  <span><img src="/images/pdf-to-png.png" class="rounded-circle" alt="Icon" height="20"></span>
-                  </a>
-                
-                  </li>
-
-
-                  <li class="nav-item">
-                    <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/pdf-to-json">
-                  <p style="color:#fff;">Convert ke JSON</p>
-                  <span><img src="/images/pdf-to-html.png" class="rounded-circle" alt="Icon" height="20"></span>
-                  </a>
-                
-                  </li>
-
-
-                  <li class="nav-item">
-                    <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/pdf-to-tiff">
-                  <p style="color:#FFF;">Convert ke TIFF</p>
-                  <span><img src="/images/pdf-to-tiff.png" class="rounded-circle" alt="Icon" height="20"></span>
-                  </a>
-                
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="d-flex justify-content-between list-group-item list-group-item-action" href="/pdf-to-txt">
-                  <p style="color:#fff;">Convert ke Text</p>
-                  <span><img src="/images/pdf-to-text.png" class="rounded-circle" alt="Icon" height="20"></span>
-                  </a>
-                
-                  </li>
-  
-              
-                </div>
-               
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 

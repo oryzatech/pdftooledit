@@ -12,43 +12,49 @@
   <link rel="stylesheet" href="/css/merger.css">  </head>
   <body>
 
-    <%- include('includes/nav.ejs') %>
-
 
     <div class="container main-container" style="width: 90%;">
-      <h1 class="text-center mt-5 font-weight-bold pt-4 heading-main">Add Page number to PDF</h1>
-      <h5 class="text-center mt-3 font-weight-bold heading-main">Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.</h5>
+      <div class="row">
+
+        <div class="col-lg-8">
+          <div class="pb-3">
+           <div class="card">
+               <div class="card-body">
+
+      <h1 class="text-center mt-5 font-weight-bold pt-4 heading-main">Beri Nomor Halaman</h1>
+      <h5 class="text-center mt-3 font-weight-bold heading-main">Tambah nomor halaman PDF pilih posisi dan huruf.</h5>
       <div class="row justify-content-center mt-5">
         <div class="col-md-10 text-center">
           <form method="POST" action="/add-page-number" enctype="multipart/form-data" id="pdf-dropzone">
             <div class="fallback">
               <div class="custom-file-upload custom-file-upload-color-1" id="pdf-dropzone">
                 <img src="/images/pdf.png" alt="" srcset="" width="72" height="72">
-                <label for="pdfs">Choose PDF Files</label>
+                <label for="pdfs">Upload PDF</label>
                 <input type="file" name="pdfFile" id="pdfs" accept=".pdf" required class="form-control-file">
               </div>
             </div>
             <div class="row mt-5">
               <div class="col-md-6">
+                
                 <div class="form-group">
-                  <label for="fontFamily">Select position of page numbers:</label>
+                  <label for="fontFamily">Tentukan posisi nomor halaman:</label>
                   <select name="format" class="form-control">
-                    <option value="bottom-right">Bottom Right</option>
-                    <option value="bottom-middle">Bottom Middle</option>
-                    <option value="bottom-left">Bottom Left</option>
-                    <option value="top-right">Top Right</option>
-                    <option value="top-middle">Top Middle</option>
-                    <option value="top-left">Top Left</option>
+                    <option value="bottom-right">Kanan Bawah</option>
+                    <option value="bottom-middle">Bawah Tengah</option>
+                    <option value="bottom-left">Kiri Bawah</option>
+                    <option value="top-right">Kanan Atas</option>
+                    <option value="top-middle">Atas Tengah</option>
+                    <option value="top-left">Kiri Atas</option>
                   </select>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="size">Select size of page numbers:</label>
+                  <label for="size">Pilih Ukuran huruf:</label>
                   <select name="size" id="size" class="form-control">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
+                    <option value="small">Kecil</option>
+                    <option value="medium">Sedang</option>
+                    <option value="large">Gede</option>
                   </select>
                 </div>
               </div>
@@ -64,15 +70,17 @@
           </div>
         </div>
       </div>
+
+
+          </div>
+          </div>
+          </div>
+          </div>
+      <%- include('includes/sidebars.ejs') %>
+      </div>
     </div>
 
-    <%- include('includes/alltools.ejs') %>
-
-    <%- include('includes/services.ejs') %>
-
-      <%- include('includes/howto.ejs') %>
-
-        <%- include('includes/footer.ejs') %>
+    
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="/js/pageno.js"></script>

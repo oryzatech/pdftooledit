@@ -12,30 +12,41 @@
   <link rel="stylesheet" href="/css/merger.css">  </head>
   <body>
 
-    <%- include('includes/nav.ejs') %>
 
 
     <div class="container main-container" style="width: 90%;">
-      <h1 class="text-center mt-5 font-weight-bold pt-4 heading-main">Text Watermark PDF</h1>
-      <h5 class="text-center mt-3 font-weight-bold heading-main">Stamp text over your PDF. Choose the typography, transparency and position</h5>
+      <div class="row">
+
+        <div class="col-lg-8">
+          <div class="pb-3">
+           <div class="card">
+               <div class="card-body">
+      <h1 class="text-center mt-5 font-weight-bold pt-4 heading-main">Beri Watermark PDF</h1>
+      <h5 class="text-center mt-3 font-weight-bold heading-main">Pilih design text atau gambar, transparansi dan posisi</h5>
       <div class="row justify-content-center mt-5">
         <div class="col-md-10 text-center">
           <form method="post" enctype="multipart/form-data" action="/add-watermark" id="pdf-dropzone">
             <div class="fallback">
               <div class="custom-file-upload custom-file-upload-color-1" id="pdf-dropzone">
                 <img src="/images/pdf.png" alt="" srcset="" width="72" height="72">
-                <label for="pdfs">Choose PDF Files</label>
+                <label for="pdfs">Upload PDF</label>
                 <input type="file" name="pdf" id="pdfs" accept=".pdf" multiple required class="form-control-file">
               </div>
             </div>
             <div class="row mt-5">
+              <div class="container">
+                <div class="pdfhead mt-4 text-center mb-3"></div>
+                <ul id="pdf-list" class="list-group mb-4"></ul>
+                <div class="row">
+                </div>
+              </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="watermarkText">Watermark Text:</label>
                   <input type="text" name="watermarkText" class="form-control">
                 </div>
                 <div class="form-group">
-                  <label for="fontSize">Font Size:</label>
+                  <label for="fontSize">Ukuran huruf:</label>
                   <input type="number" name="fontSize" min="1" max="140" class="form-control">
                 </div>
               </div>
@@ -49,13 +60,13 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="rotation">Rotation:</label>
+                  <label for="rotation">Rotasi:</label>
                   <input type="number" name="rotation" min="-360" max="360" required class="form-control">
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="form-group">
-                  <label for="opacity">Opacity:</label>
+                  <label for="opacity">Transparansi:</label>
                   <br>
                   <input type="range" name="opacity" min="0" max="1" step="0.1" value="0.5" class="form-control-range">
                 </div>
@@ -63,51 +74,59 @@
             </div>
             <input type="submit" value="Watermark PDFs" class="btn-lg common-btn pl-5 pr-5 mb-5 mt-5">
           </form>
-          <div class="container">
-            <div class="pdfhead mt-4 text-center mb-3"></div>
-            <ul id="pdf-list" class="list-group mb-4"></ul>
-            <div class="row">
-            </div>
-          </div>
+          
         </div>
+      </div>
+
+
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+      <%- include('includes/sidebars.ejs') %>
       </div>
     </div>
     
 
 
-
-
-
-
     <!-- Image watermark -->
-
-     <div class="container main-container" style="width: 90%;">
-      <h1 class="text-center mt-5 font-weight-bold pt-4 heading-main">Image Watermark PDF</h1>
-      <h5 class="text-center mt-3 font-weight-bold heading-main">Stamp an image or text over your PDF in seconds</h5>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="pb-3">
+         <div class="card">
+             <div class="card-body">
+      <h1 class="text-center mt-5 font-weight-bold pt-4 heading-main">Watermark Gambar</h1>
+      <h5 class="text-center mt-3 font-weight-bold heading-main">Beri Watermark gambar dalam PDF</h5>
       <div class="row justify-content-center mt-5">
         <div class="col-md-10 text-center">
         
           <form action="/add-image-watermark" method="POST" enctype="multipart/form-data">
-            <label for="pdfFile" style="padding: 1.5em 3em; background-color: #FD6766; cursor: pointer;">Select PDF file</label>
+            <div class="fallback">
+            <label for="pdfFile" style="padding: 1.5em 3em; background-color: #FD6766; cursor: pointer;">Pilih File PDF</label>
             <input type="file" name="imgpdf" accept=".pdf" id="pdfFile"><br>
-          
-            <label for="watermarkImage" style="padding: 1.5em 3em; background-color: #FD6766; cursor: pointer; margin-top: 20px; margin-bottom: 50px;">Select image file</label>
+              </div>
+            <label for="watermarkImage" style="padding: 1.5em 3em; background-color: #FD6766; cursor: pointer; margin-top: 20px; margin-bottom: 50px;">Pilih Gambar</label>
             <input type="file" name="img" accept=".jpg, .png" id="watermarkImage"><br>
+            <div class="container">
+              <div class="pdfhead mt-4 text-center mb-3"></div>
+              <ul id="pdf-list" class="list-group mb-4"></ul>
+              <div class="row">
+              </div>
+            </div>
           
-            <button type="submit" class="btn-lg common-btn pl-5 pr-5 mb-5 mt-5">Add Watermark</button>
+            <button type="submit" class="btn-lg common-btn pl-5 pr-5 mb-5 mt-5">Proses Dong</button>
           </form>
       
         </div>
       </div>
     </div>
+    </div>
+    </div>
+    </div>
+    </div>
 
-    <%- include('includes/alltools.ejs') %>
-
-    <%- include('includes/services.ejs') %>
-
-      <%- include('includes/howto.ejs') %>
-
-        <%- include('includes/footer.ejs') %>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="/js/watermark.js"></script>

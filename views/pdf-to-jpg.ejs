@@ -15,26 +15,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"></script>
     <script src="https://unpkg.com/pdfjs-sequential/dist/pdfjs-sequential.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <link rel="stylesheet" href="/css/merger.css"> 
     <link rel="stylesheet" href="/css/pdf-to-image.css">
     <link rel="stylesheet" href="/css/pdf-to-png.css">
 
 </head>
 
 <body>
-    <div class="nav-bar"></div>
-    <%- include('includes/nav.ejs') %>
+ 
         <div class="container main-container">
-            <h1 class="text-center mt-5 font-weight-bold pt-4 heading-main">PDF to JPG Convert</h1>
-            <h5 class="text-center mt-3 font-weight-bold heading-main">Use the PDF to JPEG converter to transform entire PDF pages into high-quality JPG images.</h5>
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <div class="pb-3">
+                     <div class="card">
+                         <div class="card-body">
+            <h1 class="text-center mt-5 font-weight-bold pt-4 heading-main">Convert ke JPG</h1>
+            <h5 class="text-center mt-3 font-weight-bold heading-main">Ubah PDF menjadi gambar kualitas HD.</h5>
             <div class="row justify-content-center mt-5"
                 style="display: flex; flex-direction: column; justify-content: center;">
                 <div class="p-5 d-flex align-items-center justify-content-center">
                     <input type="file" id="pdf-input" accept=".pdf" style="display: none;">
-                    <label for="pdf-input" id="file-input-label">Choose PDF file</label>
+                    
+                    <label for="pdf-input" id="file-input-label">Upload PDF</label>
                 </div>
+            </div>
+      <br>
+      <br>   
                 <div class="p-5 d-flex align-items-center justify-content-center" style="gap: 10px;">
                     <button id="show-pdf-button" class="btn-lg common-btn flex-grow-1 flex-lg-grow-0"
-                        style="height: 50px; margin: 0 !important;">Render PDF</button>
+                        style="height: 50px; margin: 0 !important;">Buka PDF</button>
                     <button id="download-zip-button" class="btn-lg common-btn flex-grow-1 flex-lg-grow-0"
                         style="height: 50px; display: none;">Download Zip</button>
                 </div>
@@ -68,16 +78,15 @@
             </div>
         </div>
         </div>
+        </div>
 
 
+        <%- include('includes/sidebars.ejs') %>
+        </div>
+       
+        </div>
 
-        <%- include('includes/alltools.ejs') %>
 
-            <%- include('includes/services.ejs') %>
-
-                <%- include('includes/howto.ejs') %>
-
-                    <%- include('includes/footer.ejs') %>
 
                         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
                         <script src="/js/split.js"></script>
