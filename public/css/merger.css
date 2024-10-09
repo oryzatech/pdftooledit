@@ -15,7 +15,8 @@
 	font-family: var(--open-sans);
 }
 body {
-	background-color: #201e1e;
+	background-color: #1e2124;
+  margin-top: 10px;
 
 }
 a {
@@ -26,24 +27,26 @@ li {
 }
 .card {
   border-radius: 10px;
-  background-color: #1f1f1f;
+  background-color: #151819;
   color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px;
 }
 
 .d-flex {
-  background-color: #282525;
+  background-color: #151819;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px;
 }
 .d-flex:hover{
-  background-color: #e80d9b;
+  background-color: #b10776;
 }
 .common-btn{
 	font-family: 'changa', 'cursive';
-	background-color: #ED3427;
+	background-color: #ff1100;
 	color: #fff;
 
 }
 .main-container{
-	background-color: #201e1e;
+	background-color: #1e2124;
 	border-radius: 15px;
 	font-family: 'changa', 'cursive';
 
@@ -111,7 +114,7 @@ input[type="file"] {
     color: #fff;
  } 
   .custom-file-upload-color-1{
-    background-color:  #FD6766;
+    background-color:  #b10776;
   }
   .custom-file-upload-color-2{
     background-color:  #8C5EE9 ;
@@ -173,5 +176,5 @@ input[type="file"] {
     box-shadow: 2px solid #8C5EE9;
   }
   .content-card:hover{
-    background-color: #e80d9b
+    background-color: #ae0071
   }
